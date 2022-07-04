@@ -2,6 +2,8 @@
 
 Something related to the Modem in the MediaTek SoCs...
 
+_Great repository names are short and memorable. Need inspiration? How about literate-**rotary-phone**?_
+
 ## SoCs
 
   - [MT6580](mt6580/)
