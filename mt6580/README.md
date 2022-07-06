@@ -1,5 +1,7 @@
 # MT6580
 
+## General specs
 
-**mediatek mt6580**
+  - ARM Cortex-R4 r1p4 (MIDR == 0x411fc144)
+  - 256k I/D CTMs
 
