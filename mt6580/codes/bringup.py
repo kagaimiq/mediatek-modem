@@ -4,7 +4,6 @@ import sys, time
 infracfg_ao = MMIO(0x10001000, 0x1000)
 sleep       = MMIO(0x10006000, 0x1000)
 ap_ccif0    = MMIO(0x1000c000, 0x1000)
-mcucfg      = MMIO(0x10200000, 0x1000)
 emi         = MMIO(0x10205000, 0x1000)
 
 md1_md_rgu  = MMIO(0x20050000, 0x10000)
