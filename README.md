@@ -7,6 +7,7 @@ _Great repository names are short and memorable. Need inspiration? How about lit
 ## SoCs
 
   - [MT6580](mt6580/)
+  - [MT6765](mt6765/)
 
 ## See also
 
