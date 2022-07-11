@@ -5,10 +5,6 @@
   - ARM Cortex-R4 r1p4 (MIDR == 0x411fc144)
   - 256k I/D CTMs
 
-## How to bringup
-
-For now look at [this](codes/bringup.py) instead...
-
 ## Memory map
 
 |  Address   |  Length  |                  Description                  |
@@ -21,7 +17,7 @@ For now look at [this](codes/bringup.py) instead...
 
 ### Bank0/Bank4 areas
 
-These areas contain 8 regions by 32 MiB each that can be remapped to the corresponding 32 MiB region in the EMI.
+These areas contain 8 regions by 32 MiB each that can be remapped to the corresponding 32 MiB block in the EMI.
 
 This is controlled in the `INFRACFG_AO` (`0x10001000`) regs `0x300`/`0x304` (for Bank0) and `0x308`/`0x30C` (for Bank1).
 
@@ -38,9 +34,9 @@ E.g. `0x300 = 0x07050301` and `0x304 = 0x1f141211` will create the following map
 | `0x04000000` | `0x04000000` |
 | `0x06000000` | `0x06000000` |
 | `0x08000000` | `0x10000000` |
+| `0x0A000000` |   disabled   |
+| `0x0C000000` |   disabled   |
 | `0x0E000000` | `0x1E000000` |
-
-Where the ones at `0x0A000000` and `0x0C000000` being disabled because the LSB is not set.
 
 ## AP Peripherals
 
@@ -49,7 +45,7 @@ These are most related to the bringup and operation of the Modem
 |  AP address  |  MD address  |       Name       |        Description        |
 |--------------|--------------|------------------|---------------------------|
 | `0x10001000` | `0xA0001000` | `INFRACFG_AO`    | Infrastructure config     |
-| `0x10006000` | `0xA0006000` | `SLEEP` or `SPM` | Power management          |
+| `0x10006000` | `0xA0006000` | `SLEEP` or `SPM` | System power management   |
 | `0x1000C000` | `0xA000C000` | `AP_CCIF0`       | AP CPU-CPU Interface      |
 | `0x1000D000` | `0xA000D000` | `MD_CCIF0`       | MD CPU-CPU Interface      |
 | `0x10205000` | `0xA0205000` | `EMI`            | External memory interface |
@@ -68,3 +64,8 @@ These are most related to the bringup and operation of the Modem
 | `0x83000000`? | `0x23000000` | `M3D`         |                                    |
 | `0x83010000`? | `0x23010000` | `MODEM_TOPSM` |                                    |
 | `0x84000000`? | `0x24000000` | `TDD`         |                                    |
+
+## See also
+
+-  [How to bringup](bringup.md)
+-  [How to use (the firmware blob)](usage.md)
