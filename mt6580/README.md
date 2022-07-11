@@ -23,7 +23,7 @@ This is controlled in the `INFRACFG_AO` (`0x10001000`) regs `0x300`/`0x304` (for
 
 Each byte corresponds to the 32 MiB region in the Bank0/Bank4 (i.e. `0x300` is for `0x00000000~0x01ffffff`, `0x301` is for `0x02000000~0x03ffffff` and etc.)
 
-The LSB indicates whether this region is enabled or not, the remaining bits is the EMI address bits 31~25.
+The LSB indicates whether this region is enabled or not, the remaining bits is the EMI address bits 25..31.
 
 E.g. `0x300 = 0x07050301` and `0x304 = 0x1f141211` will create the following mapping:
 
