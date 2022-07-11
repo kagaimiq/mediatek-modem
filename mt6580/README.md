@@ -64,8 +64,3 @@ These are most related to the bringup and operation of the Modem
 | `0x83000000`? | `0x23000000` | `M3D`         |                                    |
 | `0x83010000`? | `0x23010000` | `MODEM_TOPSM` |                                    |
 | `0x84000000`? | `0x24000000` | `TDD`         |                                    |
-
-## See also
-
--  [How to bringup](bringup.md)
--  [How to use (the firmware blob)](usage.md)
